@@ -16,8 +16,8 @@ module Client =
     let audio = JS.Document.GetElementById("audio") |> As<HTMLAudioElement>
 
     let setupMediaSession () =
-        let navigator = As<Navigator>(JS.Window.Navigator)
-
+        let navigator = JS.Window.Navigator
+        
         let artWork1 = ArtWork (
             Src = "https://via.placeholder.com/96",
             Sizes = "96x96",
@@ -30,7 +30,7 @@ module Client =
             Type = "image/png"
         )
 
-        if not (isNull navigator?mediaSession) then
+        if not (isNull navigator.MediaSession) then
             let metadata = new MediaMetadata(MetadataInit(
                 Title = "SoundHelix Song",
                 Artist = "Composer Name",

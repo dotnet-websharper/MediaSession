@@ -75,7 +75,7 @@ module Client =
 
     // Function to setup media session metadata and actions
     let setupMediaSession () =
-        let navigator = As<Navigator>(JS.Window.Navigator)
+        let navigator = JS.Window.Navigator
 
         let artWork1 = ArtWork (
             Src = "https://via.placeholder.com/96",

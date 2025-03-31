@@ -88,16 +88,9 @@ module Definition =
             "setPositionState" => !?MediaPositionState?stateDict ^-> T<unit> 
         ]
 
-    let Navigator = 
-        Class "Navigator"
-        |+> Instance [
-            "mediaSession" =? MediaSession
-        ]
-
     let Assembly =
         Assembly [
             Namespace "WebSharper.MediaSession" [
-                Navigator
                 MediaSession
                 MediaPositionState
                 MediaSessionActionDetails
