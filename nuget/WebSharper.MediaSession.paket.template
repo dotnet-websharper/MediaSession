@@ -15,8 +15,10 @@ tags
     Web JavaScript F# C#
 files
     ../WebSharper.MediaSession.Extensions/bin/Release/netstandard2.0/WebSharper.MediaSession.Extensions.dll ==> lib/netstandard2.0
+    ../WebSharper.MediaSession.Extensions/bin/Release/netstandard2.0/WebSharper.MediaSession.Extensions.websharper ==> lib/netstandard2.0
     ../WebSharper.MediaSession.Extensions/bin/Release/netstandard2.0/WebSharper.MediaSession.Extensions.xml ==> lib/netstandard2.0
     ../WebSharper.MediaSession/bin/Release/netstandard2.0/WebSharper.MediaSession.dll ==> lib/netstandard2.0
+    ../WebSharper.MediaSession/bin/Release/netstandard2.0/WebSharper.MediaSession.websharper ==> lib/netstandard2.0
     ../WebSharper.MediaSession/bin/Release/netstandard2.0/WebSharper.MediaSession.xml ==> lib/netstandard2.0
 dependencies
         WebSharper ~> LOCKEDVERSION:[3]
