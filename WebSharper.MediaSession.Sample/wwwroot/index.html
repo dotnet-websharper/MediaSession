@@ -1,25 +1,40 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Media Session API Example</title>
+    <title>WebSharper Media Session API Demo</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' rx='3' fill='%234f46e5'/%3E%3Ccircle cx='8' cy='8' r='3' fill='white'/%3E%3C/svg%3E" />
     <link rel="stylesheet" type="text/css" href="Content/WebSharper.MediaSession.Sample.css" />
+    <link rel="stylesheet" type="text/css" href="site.css" />
     <style>
-        /* Don't show the not-yet-loaded templates */
-        [ws-template], [ws-children-template] { display: none; }
+        audio {
+            width: 100%;
+            margin-top: 16px;
+        }
     </style>
     <script type="module" src="Content/WebSharper.MediaSession.Sample.head.js"></script>
 </head>
 <body>
-    <h1>Media Session API Example</h1>
-    <div id="main" ws-children-template="Main">
-        <div ws-onafterrender="PageInit">
-            <p>🎵 Click play to listen!</p>
+    <main class="page">
+        <header class="hero">
+            <h1>Media Session API Demo</h1>
+            <p class="lede">
+                Publish metadata and playback actions to the operating system with the
+                <a href="https://developer.mozilla.org/en-US/docs/Web/API/Media_Session_API" target="_blank" rel="noreferrer">Media Session API</a>.
+                The page must run in a secure context (HTTPS or localhost).
+            </p>
+        </header>
 
-            <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls></audio>
+        <div ws-onafterrender="PageInit">
+            <section class="card">
+                <h2>Now playing</h2>
+                <p class="hint">Sets metadata and <code>play</code> / <code>pause</code> / <code>nexttrack</code> / <code>previoustrack</code> action handlers.</p>
+                <p class="status" role="status">${status}</p>
+                <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls></audio>
+            </section>
         </div>
-    </div>
+    </main>
     <script type="module" src="Content/WebSharper.MediaSession.Sample.min.js"></script>
 </body>
 </html>
